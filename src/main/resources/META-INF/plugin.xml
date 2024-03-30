@@ -9,10 +9,14 @@
     <resource-bundle>messages.MyBundle</resource-bundle>
 
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow factoryClass="com.github.manzhizhen.callhierarchyplus.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
     </extensions>
+    <actions>
+        <action id="my-first" class="com.manzhizhen.plugin.call.hierarchy.plus.MyFirstPlugin" text="我的第一个插件"
+                description="我的第一个插件">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+        </action>
+    </actions>
 
     <applicationListeners>
-        <listener class="com.github.manzhizhen.callhierarchyplus.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
     </applicationListeners>
 </idea-plugin>
